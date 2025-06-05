@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Étudiant</title>
+  <!-- Intégration Bootstrap 5 via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Mon Portfolio</a>
+    </div>
+    </nav>
+    <main class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+        <div class="card text-center">
+            <!-- Ta photo -->
+            <img src="Photo_linkedin.jpg" class="card-img-top" alt="Ma photo">
+            
+            <div class="card-body">
+            <h5 class="card-title">Breuiller Julian</h5>
+            <p class="card-text">Étudiant en Informatique et Cybersécurité, passionné par la cybersécurité et les CTF.</p>
+            
+            <!-- Bouton pour modale -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLettre">
+                Voir lettre de motivation
+            </button>
+            </div>
+        </div>
+        </div>
+    </div>
+    </main>
+    <!-- Modale Bootstrap -->
+    <div class="modal fade" id="modalLettre" tabindex="-1" aria-labelledby="lettreLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="lettreLabel">Lettre de Motivation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+            <p>
+            Madame, Monsieur,<br><br>
+            Actuellement étudiant en Informatique et Cybersécurité au sein de l'INSA Hauts de France, je suis à la recherche d’un stage en cybersécurité pour une durée de 6 mois à partir du 30 mars 2027. Intéressé par les enjeux de sécurité des systèmes d’information, je souhaite intégrer une entreprise dynamique dans ce domaine afin de développer mes compétences techniques et opérationnelles.
+
+Passionné par la sécurité informatique, j’ai acquis des bases solides en réseaux, systèmes, virtualisation, et en protection des données au cours de ma formation. J’ai également réalisé des projets personnels autour de la détection d’intrusions, des audits de sécurité et de la mise en place de pare-feux et de politiques de sécurité. J’utilise régulièrement des outils comme Wireshark, Nmap, VirtualBox et Kali Linux, et je m’initie aux méthodologies comme l’analyse de risques ou l’ethical hacking.
+
+Intégrer votre équipe serait pour moi l’opportunité de mettre en pratique mes connaissances dans un environnement professionnel exigeant, d’apprendre auprès d’experts du domaine, et de contribuer, même modestement, à la sécurisation de vos systèmes d’information. Curieux, rigoureux et impliqué, je saurai m’adapter aux missions qui me seront confiées et faire preuve d’initiative.
+
+Je me tiens à votre disposition pour un entretien au cours duquel je pourrais vous exposer plus en détail ma motivation et mes compétences. En vous remerciant par avance de l’attention que vous porterez à ma candidature, je vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées. <br>
+
+Julian Breuiller<br>
+breuillerjulian@gmail.com – 0768453460
+            </p>
+            <!-- Remplace le contenu par ta propre lettre -->
+        </div>
+        </div>
+    </div>
+    </div>
+    <ul class="nav nav-tabs mt-4" id="cvTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="exp-tab" data-bs-toggle="tab" data-bs-target="#exp" type="button">Expériences</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="edu-tab" data-bs-toggle="tab" data-bs-target="#edu" type="button">Éducation</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="comp-tab" data-bs-toggle="tab" data-bs-target="#comp" type="button">Compétences</button>
+    </li>
+    </ul>
+
+    <div class="tab-content border border-top-0 p-3" id="cvTabsContent">
+    <div class="tab-pane fade show active" id="exp" role="tabpanel">
+        <p><strong>Stagiaire de recherche en cybersécurité</strong> IME, Rio de Janeiro, 2025</p>
+        <p><strong>Caissier dans un supermarché</strong> Leclerc, Saint Martin de ré, 2023</p>
+        <p><strong>Stagiaire</strong> Dassault Systems, Toulouse, 2018</p>
+    </div>
+    <div class="tab-pane fade" id="edu" role="tabpanel">
+        <p><strong>Prépa intégré</strong> - INSA Hauts de France, Valenciennes, 2022-2024</p>
+        <p><strong>Baccalauréat mention Bien</strong> - Lycée Le Caousou, 2022</p>
+    </div>
+    <div class="tab-pane fade" id="comp" role="tabpanel">
+        <ul>
+        <li><span data-bs-toggle="tooltip" title="Bon niveau en HTML/CSS">HTML/CSS</span></li>
+        <li><span data-bs-toggle="tooltip" title="Utilisation de React pour des projets">JavaScript / React</span></li>
+        <li><span data-bs-toggle="tooltip" title="Utilisation de React pour des projets">Python / C / Java</span></li>
+        <li><span data-bs-toggle="tooltip" title="Utilisation de React pour des projets">Mysql / PHP</span></li>
+        <li><span data-bs-toggle="tooltip" title="Utilisation de React pour des projets">Kali</span></li>
+        <li><span data-bs-toggle="tooltip" title="Utilisation de React pour des projets">CTF</span></li>
+        </ul>
+    </div>
+    </div>
+    <script>
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    const tooltipList = tooltipTriggerList.map(el => new bootstrap.Tooltip(el));
+    </script>
+    <div id="carouselProjets" class="carousel slide mt-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="image.png" class="d-block w-100" alt="Projet 1">
+        <div class="carousel-caption d-none d-md-block">
+            <h5><br>Développement d'un application pour jouer aux échecs</h5>
+            <p>Nous avons codé une application mobile de jeu d'échecs où l'on peut affronter un bot mais aussi s'affronter sur le même appareil</p>
+        </div>
+        </div>
+        <div class="carousel-item">
+        <img src="snake.jpg" class="d-block w-100" alt="Projet 2">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Une IA qui joue a Snake</h5>
+            <p>J'ai codé une IA qui bat la majorité des humains à Snake.</p>
+        </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjets" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselProjets" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+    </div>
+    <div class="mt-5">
+    <h4>Langues</h4>
+    <ul class="list-group">
+        <li class="list-group-item">Français : Langue maternelle</li>
+        <li class="list-group-item">Anglais : Niveau B2</li>
+        <li class="list-group-item">Espagnol : Niveau B1</li>
+        <li class="list-group-item">Chinois : Niveau A2</li>
+        <li class="list-group-item">Japonais : Niveau A1</li>
+        <li class="list-group-item">Portugais : Niveau A1</li>
+    </ul>
+    </div>
+</body>
+</html>
